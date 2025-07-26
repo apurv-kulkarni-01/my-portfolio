@@ -7,7 +7,12 @@ const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 import React, { useEffect, useState } from "react";
 
 export default function SubTitle() {
-  const names = ["full-stack developer.", "tech enthusiast.", "researcher."];
+  const names = [
+    "full-stack developer.",
+    "ai enthusiast.",
+    "java junkie.",
+    "serial thinker.",
+  ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 

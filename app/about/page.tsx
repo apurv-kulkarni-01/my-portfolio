@@ -3,30 +3,30 @@ import styles from "./about.module.css";
 const About = () => {
   return (
     <div className={styles.aboutContainer}>
+      <img src="/profile.jpeg" alt="Apurv" className={styles.profileImage} />
       <div>
         Hi, I'm Apurv — a software developer with 2 years of experience building
         full-stack web applications using the MERN stack (MongoDB, Express,
         React, Node.js). I love turning complex problems into intuitive digital
-        experiences.
+        experiences that are fast, functional, and user-friendly.
       </div>
       <div>
-        I hold a Bachelor’s degree in Computer Science and am currently
-        preparing to pursue my MS in Computer Science at Arizona State
-        University this Fall (2025). My goal is to specialize in intelligent
-        systems and apply my skills in the FinTech sector, where I can help
-        bridge technology with finance to build scalable, secure, and
-        data-driven solutions.
+        My expertise includes building scalable frontends with React and
+        Next.js, crafting secure backend APIs with Node.js and Express, and
+        managing data effectively using MySQL, Firebase Realtime Database and
+        MongoDB. I have good experience of working on technologies like Go lang,
+        Python and Azure. I also enjoy working with tools like Docker and Git
+        for modern, maintainable development workflows.
       </div>
       <div>
-        My journey so far includes building production-grade apps, contributing
-        to agile teams, and exploring modern tools like Next.js, Tailwind CSS,
-        and TypeScript. I’m always learning, always curious — and always eager
-        to collaborate on impactful projects.
+        I've contributed to agile teams, shipped production-grade features, and
+        continuously refined my problem-solving and debugging skills. I'm driven
+        by clean code, meaningful user experiences, and a deep curiosity for how
+        great software is built.
       </div>
       <div>
-        When I'm not coding, you'll find me exploring product design ideas,
-        reading about financial tech trends, or experimenting with new
-        JavaScript libraries.
+        Outside of tech, I enjoy exploring product design ideas, reading about
+        FinTech trends, and occasionally jamming on the guitar.
       </div>
       <div>Let’s build something exciting together.</div>
     </div>

@@ -1,4 +1,4 @@
-import SubTitle from "./subTitle";
+import SubTitle from "../components/subtitle/subTitle";
 import styles from "./page.module.css";
 import { Inter } from "next/font/google";
 
