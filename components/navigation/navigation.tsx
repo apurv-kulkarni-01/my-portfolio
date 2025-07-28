@@ -1,8 +1,14 @@
+"use client";
 import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
+import Hamburger from "hamburger-react";
+import { useState } from "react";
+import NavItems from "./navList";
 
 const NavigationBar = () => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <nav className={styles.navbar}>
       <Link href="/" passHref>
@@ -17,13 +23,13 @@ const NavigationBar = () => {
           />
         </div>
       </Link>
-      <div className={styles.links}>
-        <Link href="/about" className={styles.linkItem}>
-          About
-        </Link>
-        <Link href="/contact" className={styles.linkItem}>
-          Contact
-        </Link>
+
+      <div className={`${styles.links} ${isOpen ? styles.active : ""}`}>
+        <NavItems isOpen={isOpen} setIsOpen={setOpen} />
+      </div>
+
+      <div className={styles.hamburger}>
+        <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
       </div>
     </nav>
   );

@@ -10,7 +10,7 @@ export default function SubTitle() {
   const names = [
     "full-stack developer.",
     "ai enthusiast.",
-    "java junkie.",
+    "coffeeholic.",
     "serial thinker.",
   ];
   const [index, setIndex] = useState(0);

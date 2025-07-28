@@ -1,7 +1,7 @@
 .aboutContainer {
   max-width: 700px;
-  margin: 96px auto 48px auto; /* more space on top for image pull-out */
-  padding: 64px 24px 32px 24px; /* extra padding-top */
+  margin: 96px auto 48px auto; /* top space below navbar, bottom spacing */
+  padding: 64px 24px 32px 24px;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
@@ -10,12 +10,14 @@
   gap: 1.5em;
   font-family: "Inter", Arial, sans-serif;
   position: relative;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .aboutContainer div {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #222;
+  word-break: break-word;
 }
 
 .aboutContainer div:first-child {
@@ -27,6 +29,7 @@
   font-style: italic;
   color: #4f46e5;
 }
+
 .profileImage {
   width: 200px;
   height: 200px;
@@ -34,9 +37,44 @@
   object-fit: cover;
   border: 5px solid white;
   position: relative;
-  top: -100px; /* pull image up */
-  margin: 0 auto -80px auto; /* center + adjust spacing below */
+  top: -100px;
+  margin: 0 auto -80px auto;
   z-index: 10;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   background-color: white;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutContainer {
+    margin: 80px 16px 32px;
+    padding: 48px 16px 24px;
+  }
+
+  .aboutContainer div {
+    font-size: 1rem;
+  }
+
+  .aboutContainer div:first-child {
+    font-size: 1.1rem;
+  }
+
+  .profileImage {
+    width: 160px;
+    height: 160px;
+    top: -80px;
+    margin-bottom: -60px;
+  }
 }

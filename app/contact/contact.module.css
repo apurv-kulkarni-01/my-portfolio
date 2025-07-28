@@ -1,6 +1,6 @@
 .contactContainer {
   max-width: 700px;
-  margin: 48px auto;
+  margin: 96px auto 48px; /* added top margin to push below navbar */
   padding: 32px 24px;
   background: #fff;
   border-radius: 18px;
@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 1.5em;
   font-family: "Inter", Arial, sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .contactContainer div {
@@ -25,8 +26,37 @@
 .link {
   color: #4f46e5;
   text-decoration: none;
+  word-break: break-word; /* in case of long URLs */
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contactContainer {
+    margin: 80px 16px 32px;
+    padding: 24px 16px;
+  }
+
+  .contactContainer div {
+    font-size: 1rem;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
 }
