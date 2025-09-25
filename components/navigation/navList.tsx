@@ -6,15 +6,29 @@ type Props = {
   setIsOpen: (open: boolean) => void;
 };
 
-
 export default function NavItems({ isOpen, setIsOpen }: Props) {
   return (
     <>
-      <Link href="/about" className={styles.linkItem} onClick={() => setIsOpen(false)}>
-        About
+      <Link
+        href="/code"
+        className={styles.linkItem}
+        onClick={() => setIsOpen(false)}
+      >
+        Where I code
       </Link>
-      <Link href="/contact" className={styles.linkItem} onClick={() => setIsOpen(false)}>
+      <Link
+        href="/contact"
+        className={styles.linkItem}
+        onClick={() => setIsOpen(false)}
+      >
         Contact
+      </Link>
+      <Link
+        href="/about"
+        className={styles.linkItem}
+        onClick={() => setIsOpen(false)}
+      >
+        About
       </Link>
     </>
   );

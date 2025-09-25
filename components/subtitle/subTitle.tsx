@@ -1,17 +1,23 @@
 "use client";
 import styles from "./page.module.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], 
+});
 
 import React, { useEffect, useState } from "react";
 
 export default function SubTitle() {
+  // "bibliophile.",
   const names = [
     "full-stack developer.",
     "ai enthusiast.",
-    "coffeeholic.",
+    "javaphile.",
     "serial thinker.",
+    "wantrepreneur.",
+    "guitar strummer.",
   ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -29,7 +35,7 @@ export default function SubTitle() {
   }, [index]);
 
   return (
-    <ul className={`${styles.list} ${styles.subTitle} ${inter.className}`}>
+    <ul className={`${styles.list} ${styles.subTitle} ${poppins.className}`}>
       <li
         key={names[index]}
         className={fade ? styles.listItemFadeIn : styles.listItemFadeOut}
