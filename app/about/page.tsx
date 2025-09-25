@@ -5,7 +5,7 @@ const About = () => {
     <div className={styles.aboutContainer}>
       <img src="/profile.jpeg" alt="Apurv" className={styles.profileImage} />
       <div>
-        Hi, I'm Apurv — a software developer with 2 years of experience building
+        Hi, I'm Apurv, a software developer with 2.5 years of experience building
         full-stack web applications using the MERN stack (MongoDB, Express,
         React, Node.js). I love turning complex problems into intuitive digital
         experiences that are fast, functional, and user-friendly.
@@ -13,7 +13,7 @@ const About = () => {
       <div>
         My expertise includes building scalable frontends with React and
         Next.js, crafting secure backend APIs with Node.js and Express, and
-        managing data effectively using MySQL, Firebase Realtime Database and
+        managing data effectively using PostgreSQL, Firebase Realtime Database and
         MongoDB. I have good experience of working on technologies like Go lang,
         Python and Azure. I also enjoy working with tools like Docker and Git
         for modern, maintainable development workflows.
