@@ -10,9 +10,6 @@ const PageNotFound = () => {
         <Link href="/" className={styles.linkButton}>
           Return Home
         </Link>
-        <Link href="/about" className={styles.linkButton}>
-          About
-        </Link>
       </div>
     </div>
   );

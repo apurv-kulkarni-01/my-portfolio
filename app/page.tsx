@@ -1,8 +1,11 @@
 import SubTitle from "../components/subtitle/subTitle";
 import styles from "./page.module.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // you can add more weights if needed
+});
 
 type HeaderProps = {
   title?: string;
@@ -11,13 +14,11 @@ type HeaderProps = {
 
 function Header({ title, className }: HeaderProps) {
   return (
-    <h1 className={`${className} ${inter.className}`}>
+    <h1 className={`${className} ${poppins.className}`}>
       {title ? title : "Default title"}
     </h1>
   );
 }
-
-import React, { useEffect, useState } from "react";
 
 export default function HomePage() {
   return (

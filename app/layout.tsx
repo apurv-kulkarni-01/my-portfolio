@@ -2,8 +2,8 @@ import Link from "next/link";
 import NavigationBar from "@/components/navigation/navigation";
 
 export const metadata = {
-  title: "Apurv",
-  description: "Portfolio website of Apurv Kulkarni",
+  title: "Apurv Kulkarni",
+  description: "Apurv Kulkarni personal portfolio.",
 };
 
 type RootLayout = {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: RootLayout) {
     <html lang="en">
       <body>
         <NavigationBar />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
