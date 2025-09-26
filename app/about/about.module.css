@@ -1,0 +1,80 @@
+.aboutContainer {
+  max-width: 700px;
+  margin: 96px auto 48px auto;
+  padding: 4px 24px 32px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  font-family: "Poppins", Arial, sans-serif;
+  position: relative;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.aboutContainer div {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #222;
+  word-break: break-word;
+}
+
+.aboutContainer div:first-child {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.aboutContainer div:last-child {
+  font-style: italic;
+  color: #4f46e5;
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  position: relative;
+  top: -100px;
+  margin: 0 auto -80px auto;
+  z-index: 10;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutContainer {
+    margin: 80px 16px 32px;
+    padding: 48px 16px 24px;
+  }
+
+  .aboutContainer div {
+    font-size: 1rem;
+  }
+
+  .aboutContainer div:first-child {
+    font-size: 1.1rem;
+  }
+
+  .profileImage {
+    width: 160px;
+    height: 160px;
+    top: -80px;
+    margin-bottom: -60px;
+  }
+}
