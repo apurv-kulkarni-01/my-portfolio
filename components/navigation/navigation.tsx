@@ -1,38 +1,27 @@
-"use client";
 import Link from "next/link";
-import styles from "./page.module.css";
 import Image from "next/image";
-import Hamburger from "hamburger-react";
-import { useState } from "react";
+import styles from "./page.module.css";
 import NavItems from "./navList";
 
-const NavigationBar = () => {
-  const [isOpen, setOpen] = useState(false);
-
+export default function NavigationBar() {
   return (
-    <nav className={styles.navbar}>
-      <Link href="/" passHref>
-        <div className={styles.logoWrapper}>
+    <nav className={styles.navbar} aria-label="Main navigation">
+      <div className={styles.navPill}>
+        <NavItems side="left" />
+        <span className={styles.separator} aria-hidden="true" />
+        <Link href="/" className={styles.logoWrapper} aria-label="Apurv Kulkarni home">
           <Image
             src="/apurv.svg"
-            alt="Logo"
+            alt="Apurv Kulkarni logo"
             width={40}
             height={40}
             className={styles.logo}
             priority
           />
-        </div>
-      </Link>
-
-      <div className={`${styles.links} ${isOpen ? styles.active : ""}`}>
-        <NavItems isOpen={isOpen} setIsOpen={setOpen} />
-      </div>
-
-      <div className={styles.hamburger}>
-        <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+        </Link>
+        <span className={styles.separator} aria-hidden="true" />
+        <NavItems side="right" />
       </div>
     </nav>
   );
-};
-
-export default NavigationBar;
+}

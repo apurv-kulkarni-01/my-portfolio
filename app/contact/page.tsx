@@ -10,8 +10,8 @@ const Contact = () => {
       </div>
       <div>
         📧 Email:{" "}
-        <a href="mailto:dev.apurv.in@gmail.com" className={styles.link}>
-          dev.apurv.in@gmail.com
+        <a href="mailto:apurvkulkarni.au@gmail.com" className={styles.link}>
+          apurvkulkarni.au@gmail.com
         </a>
       </div>
       <div>

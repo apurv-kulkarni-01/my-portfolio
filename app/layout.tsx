@@ -1,5 +1,5 @@
-import Link from "next/link";
 import NavigationBar from "@/components/navigation/navigation";
+import "./globals.css";
 
 export const metadata = {
   title: "Apurv Kulkarni",
