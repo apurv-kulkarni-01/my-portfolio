@@ -1,40 +1,82 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: min(680px, calc(100vh - 100px));
+  display: grid;
+  place-items: center;
+  padding: 64px 24px 88px;
+  background: var(--background);
+}
+
+.content {
+  width: min(100%, 660px);
+  padding: 54px clamp(24px, 7vw, 72px) 58px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
   text-align: center;
-  background-color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: clamp(7vh, 10vh);
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .16em;
+}
+
+.number {
+  margin: 20px 0 14px;
+  color: #d8d5ce;
+  font-size: clamp(100px, 24vw, 190px);
+  font-weight: 500;
+  letter-spacing: -.1em;
+  line-height: .8;
 }
 
 .heading {
-  font-size: 2rem;
-  color: #e63946;
-  margin-bottom: 1rem;
+  margin-top: 30px;
+  font-size: clamp(27px, 5vw, 42px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: 1.1;
 }
 
-.image {
-  max-width: 400px;
-  width: 80%;
-  margin-bottom: 2rem;
-}
-
-.links {
-  display: flex;
-  gap: 1rem;
+.message {
+  max-width: 360px;
+  margin: 14px auto 28px;
+  color: #77736d;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 .linkButton {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 13px 17px;
+  border: 1px solid #171715;
+  border-radius: 999px;
+  color: #fff;
+  background: #171715;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color .18s ease, background .18s ease, transform .18s ease;
 }
 
 .linkButton:hover {
-  background-color: #333333;
+  transform: translateY(-2px);
+  color: #171715;
+  background: transparent;
+}
+
+.linkButton:focus-visible {
+  outline: 2px solid #77736d;
+  outline-offset: 4px;
+}
+
+@media (max-width: 520px) {
+  .container { min-height: calc(100vh - 90px); padding: 36px 18px 72px; }
+  .content { padding-top: 44px; padding-bottom: 46px; border-radius: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linkButton { transition: none; }
 }

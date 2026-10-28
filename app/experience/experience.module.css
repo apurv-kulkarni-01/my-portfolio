@@ -1,0 +1,37 @@
+.page { width: min(1040px, 100%); margin: 0 auto; padding: 80px 42px 90px; }
+.header { padding: 38px 0 72px; border-bottom: 1px solid var(--line); }
+.eyebrow { color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .15em; }
+.header h1 { margin-top: 24px; font-size: clamp(62px, 10vw, 126px); line-height: .9; letter-spacing: -.08em; font-weight: 500; }
+.header h1 span { color: #aaa69f; }
+.lead { margin-top: 24px; max-width: 440px; color: #65625d; font-size: 16px; line-height: 1.65; }
+.timeline { padding: 44px 0 15px; }
+.sectionLabel { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 15px; color: #969188; font-size: 9px; font-weight: 650; letter-spacing: .13em; }
+.roleCard { padding: 32px 0 35px; border-top: 1px solid var(--line); }
+.roleTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.roleIndex { color: #99958d; font-size: 9px; font-weight: 650; letter-spacing: .12em; }
+.roleTop h2 { margin-top: 14px; font-size: clamp(25px, 4vw, 38px); line-height: 1.08; letter-spacing: -.05em; font-weight: 500; }
+.company { margin-top: 8px; color: #77736d; font-size: 14px; }
+.dates { padding-top: 2px; color: #77736d; font-size: 11px; white-space: nowrap; }
+.description { max-width: 620px; margin-top: 27px; color: #65625d; font-size: 14px; line-height: 1.65; }
+.externalLink { color: #37342f; text-decoration: underline; text-decoration-color: #aaa69f; text-underline-offset: 3px; }
+.externalLink:hover { color: #000; text-decoration-color: currentColor; }
+.highlights { margin-top: 25px; list-style: none; border-top: 1px solid var(--line); }
+.highlights li { display: grid; grid-template-columns: 40px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: #77736d; font-size: 12px; line-height: 1.5; }
+.highlights li span:first-child { color: #a19d94; font-size: 10px; }
+.footer { padding-top: 40px; border-top: 1px solid var(--line); }
+.footer > div { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 18px; }
+.footer h2 { font-size: clamp(25px, 4vw, 39px); font-weight: 500; letter-spacing: -.05em; }
+.footer a { display: inline-flex; gap: 18px; align-items: center; flex: 0 0 auto; padding-bottom: 7px; border-bottom: 1px solid #bbb7ae; font-size: 12px; font-weight: 600; }
+@media (max-width: 600px) {
+  .page { padding: 50px 22px 65px; }
+  .header { padding: 28px 0 50px; }
+  .header h1 { margin-top: 20px; }
+  .lead { font-size: 14px; }
+  .sectionLabel span:last-child { display: none; }
+  .roleCard { padding: 25px 0 28px; }
+  .roleTop { flex-direction: column; gap: 12px; }
+  .dates { order: -1; }
+  .roleTop h2 { margin-top: 10px; }
+  .description { margin-top: 19px; }
+  .footer > div { align-items: flex-start; flex-direction: column; }
+}

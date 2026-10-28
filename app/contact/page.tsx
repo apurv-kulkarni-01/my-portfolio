@@ -1,32 +1,38 @@
 import styles from "./contact.module.css";
 
-const Contact = () => {
+export const metadata = {
+  title: "Contact | Apurv Kulkarni",
+};
+
+export default function ContactPage() {
   return (
-    <div className={styles.contactContainer}>
-      <div className={styles.header}>Let’s Connect</div>
-      <div>
-        Whether you want to discuss a new project, collaborate on something
-        exciting, or just say hello, I’d love to hear from you.
-      </div>
-      <div>
-        📧 Email:{" "}
-        <a href="mailto:dev.apurv.in@gmail.com" className={styles.link}>
-          dev.apurv.in@gmail.com
+    <div className={styles.page}>
+      <header className={styles.header}>
+        <p className={styles.eyebrow}>HAVE SOMETHING IN MIND?</p>
+        <h1>Contact<span>.</span></h1>
+        <p className={styles.lead}>
+          Have a project to discuss, want to collaborate, or just want to say
+          hello? I’d be glad to hear from you.
+        </p>
+      </header>
+
+      <section className={styles.contactOptions} aria-label="Contact details">
+        <a className={styles.contactOption} href="mailto:apurvkulkarni.au@gmail.com">
+          <span className={styles.label}>EMAIL</span>
+          <span className={styles.value}>apurvkulkarni.au@gmail.com</span>
+          <span className={styles.arrow} aria-hidden="true">↗</span>
         </a>
-      </div>
-      <div>
-        💼 LinkedIn:{" "}
         <a
+          className={styles.contactOption}
           href="https://www.linkedin.com/in/apurv-kulkarni/"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.link}
         >
-          linkedin.com/in/apurv-kulkarni
+          <span className={styles.label}>LINKEDIN</span>
+          <span className={styles.value}>linkedin.com/in/apurv-kulkarni</span>
+          <span className={styles.arrow} aria-hidden="true">↗</span>
         </a>
-      </div>
+      </section>
     </div>
   );
-};
-
-export default Contact;
+}
