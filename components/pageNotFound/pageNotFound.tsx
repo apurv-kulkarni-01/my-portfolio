@@ -4,11 +4,15 @@ import styles from "./page.module.css";
 const PageNotFound = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Where you sniffing around?! sus!</h1>
-      <img src="/not-found.jpg" className={styles.image} />
-      <div className={styles.links}>
+      <div className={styles.content}>
+        <p className={styles.eyebrow}>404 · OFF THE MAP</p>
+        <p className={styles.number} aria-hidden="true">404</p>
+        <h1 className={styles.heading}>This page took a wrong turn.</h1>
+        <p className={styles.message}>
+          I checked the usual places. It seems to have gone for a little walk.
+        </p>
         <Link href="/" className={styles.linkButton}>
-          Return Home
+          Back to the homepage <span aria-hidden="true">↗</span>
         </Link>
       </div>
     </div>

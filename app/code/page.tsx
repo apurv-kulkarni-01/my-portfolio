@@ -1,39 +1,51 @@
 import styles from "./code.module.css";
 
-const Code = () => {
-  return (
-    <div className={styles.contactContainer}>
-      <div className={styles.header}>The Code Lab</div>
-      <div>
-        Where my ‘Dark Passenger’ quietly cleans up bugs and crafts clean
-        solutions.
-        <br /> You can explore my coding journey, problem-solving practice, and
-        open-source contributions here:
-      </div>
-      <div>
-        🧑‍💻 GitHub:{" "}
-        <a
-          href="https://github.com/apurv-kulkarni-01"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          github.com/apurv-kulkarni-01
-        </a>
-      </div>
-      <div>
-        🏆 LeetCode:{" "}
-        <a
-          href="https://leetcode.com/u/dev-apurv"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          leetcode.com/u/dev-apurv
-        </a>
-      </div>
-    </div>
-  );
+export const metadata = {
+  title: "Code | Apurv Kulkarni",
 };
 
-export default Code;
+const profiles = [
+  {
+    label: "GitHub",
+    description: "Projects, experiments, and open-source contributions.",
+    href: "https://github.com/apurv-kulkarni-01",
+    url: "github.com/apurv-kulkarni-01",
+  },
+  {
+    label: "LeetCode",
+    description: "Problem-solving practice and coding challenges.",
+    href: "https://leetcode.com/u/dev-apurv",
+    url: "leetcode.com/u/dev-apurv",
+  },
+];
+
+export default function CodePage() {
+  return (
+    <div className={styles.page}>
+      <header className={styles.header}>
+        <p className={styles.eyebrow}>NOTES, PROJECTS &amp; PRACTICE</p>
+        <h1>Code<span>.</span></h1>
+        <p className={styles.lead}>
+          A few places to explore what I build and how I keep learning.
+        </p>
+      </header>
+
+      <section className={styles.profiles} aria-label="Coding profiles">
+        {profiles.map((profile, index) => (
+          <article className={styles.profile} key={profile.label}>
+            <span className={styles.number}>
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <div className={styles.profileCopy}>
+              <h2>{profile.label}</h2>
+              <p>{profile.description}</p>
+            </div>
+            <a href={profile.href} target="_blank" rel="noopener noreferrer">
+              {profile.url} <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        ))}
+      </section>
+    </div>
+  );
+}

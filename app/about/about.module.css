@@ -1,80 +1,20 @@
-.aboutContainer {
-  max-width: 700px;
-  margin: 96px auto 48px auto;
-  padding: 4px 24px 32px 24px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  font-family: "Poppins", Arial, sans-serif;
-  position: relative;
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-.aboutContainer div {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #222;
-  word-break: break-word;
-}
-
-.aboutContainer div:first-child {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.aboutContainer div:last-child {
-  font-style: italic;
-  color: #4f46e5;
-}
-
-.profileImage {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  position: relative;
-  top: -100px;
-  margin: 0 auto -80px auto;
-  z-index: 10;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .aboutContainer {
-    margin: 80px 16px 32px;
-    padding: 48px 16px 24px;
-  }
-
-  .aboutContainer div {
-    font-size: 1rem;
-  }
-
-  .aboutContainer div:first-child {
-    font-size: 1.1rem;
-  }
-
-  .profileImage {
-    width: 160px;
-    height: 160px;
-    top: -80px;
-    margin-bottom: -60px;
-  }
+.page { width: min(1040px, 100%); margin: 0 auto; padding: 80px 42px 90px; }
+.header { padding: 38px 0 58px; border-bottom: 1px solid var(--line); }
+.eyebrow { color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .15em; }
+.header h1 { margin-top: 24px; font-size: clamp(62px, 10vw, 126px); line-height: .9; letter-spacing: -.08em; font-weight: 500; }
+.header h1 span { color: #aaa69f; }
+.lead { margin-top: 24px; max-width: 440px; color: #65625d; font-size: 16px; line-height: 1.65; }
+.profile { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); align-items: start; gap: clamp(32px, 7vw, 82px); padding: 52px 0 24px; }
+.portraitFrame { aspect-ratio: 4 / 5; position: relative; overflow: hidden; border-radius: 18px; background: #e8e5df; }
+.portrait { object-fit: cover; object-position: center 35%; }
+.bio { display: flex; flex-direction: column; gap: 20px; padding-top: 3px; color: #65625d; font-size: 15px; line-height: 1.8; }
+.signoff { color: #171715; font-weight: 600; }
+@media (max-width: 700px) {
+  .page { padding: 50px 22px 65px; }
+  .header { padding: 28px 0 42px; }
+  .header h1 { margin-top: 20px; }
+  .lead { font-size: 14px; }
+  .profile { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 34px; }
+  .portraitFrame { width: min(100%, 340px); aspect-ratio: 4 / 3; }
+  .bio { gap: 16px; font-size: 14px; }
 }
