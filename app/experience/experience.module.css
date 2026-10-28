@@ -13,6 +13,8 @@
 .company { margin-top: 8px; color: #77736d; font-size: 14px; }
 .dates { padding-top: 2px; color: #77736d; font-size: 11px; white-space: nowrap; }
 .description { max-width: 620px; margin-top: 27px; color: #65625d; font-size: 14px; line-height: 1.65; }
+.externalLink { color: #37342f; text-decoration: underline; text-decoration-color: #aaa69f; text-underline-offset: 3px; }
+.externalLink:hover { color: #000; text-decoration-color: currentColor; }
 .highlights { margin-top: 25px; list-style: none; border-top: 1px solid var(--line); }
 .highlights li { display: grid; grid-template-columns: 40px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: #77736d; font-size: 12px; line-height: 1.5; }
 .highlights li span:first-child { color: #a19d94; font-size: 10px; }

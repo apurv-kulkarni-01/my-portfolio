@@ -2,7 +2,7 @@ import NavigationBar from "@/components/navigation/navigation";
 import "./globals.css";
 
 export const metadata = {
-  title: "Apurv Kulkarni",
+  title: "Home | Apurv Kulkarni",
   description: "Apurv Kulkarni personal portfolio.",
 };
 
